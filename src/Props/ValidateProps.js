@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Nghia from '../image/nghia.jpg';
 
-console.log(Nghia);
-
 class ValidateProp extends React.Component {
    render() {
       return (

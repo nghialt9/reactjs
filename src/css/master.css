@@ -1,0 +1,12 @@
+.player {
+    pointer-events: none;
+}
+
+.card-body:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.card:hover {
+    cursor: pointer;
+}
