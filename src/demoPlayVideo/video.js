@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
+import CommentBox from './commentBox';
+import { server } from '../authen/helper';
 
 class Video extends Component {
   constructor(props, context) {
@@ -18,29 +20,20 @@ class Video extends Component {
         source: name,
         playing: true
       });
-
+      <CommentBox url={server.baseURL + "comments"} pollInterval={1000}/>
     };
   }
 
   render() {
-    const commentData = [
-      {
-        author: "Shawn Spencer",
-        text: "I've heard it both ways"
-      },
-      {
-        author: "Burton Guster",
-        text: "You hear about Pluto? That's messed up"
-      }
-    ];
-
     const elements = ['https://www.youtube.com/watch?v=dn4uH41zxpw',
       'https://www.youtube.com/watch?v=mNxNoHRfWRA&t=0s',
       'https://www.youtube.com/watch?v=Qd0AdsOGEvo',
       'https://www.youtube.com/watch?v=p7NThYHx4ac',
       'https://www.youtube.com/watch?v=eQgkJIBDtvM',
       'https://www.youtube.com/watch?v=DoFM8p6p_kA',
-      'https://www.youtube.com/watch?v=VfLe4eCtggc'
+      'https://www.youtube.com/watch?v=VfLe4eCtggc',
+      'https://www.youtube.com/watch?v=ub8dXATkosg',
+      'https://www.youtube.com/watch?v=pxf7YkF0iN0'
     ];
     const items = []
 
@@ -62,7 +55,7 @@ class Video extends Component {
     return (
       <div className="container">
         <div className="row">
-          <ReactPlayer playing={this.state.playing} url={this.state.source} pip controls width="100%" height="600px" />
+          <ReactPlayer playing={this.state.playing} url={this.state.source} pip controls width="100%" height="400px" />
           .
         </div>
         <div className="row">
