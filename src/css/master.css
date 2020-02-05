@@ -10,3 +10,37 @@
 .card:hover {
     cursor: pointer;
 }
+
+.header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: aquamarine;
+    width: 100%;
+    box-shadow: 0 4px 9px rgba(192, 192, 192, 0.2);
+    height: 100px;
+}
+
+.body {
+    margin-top: 200px;
+}
+
+.widget {
+    z-index: 1000;
+    position: fixed;
+    top: 15rem;
+    right: 0;
+    background: bisque;
+    width: 90px;
+    height: 350px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    background: blue;
+    width: 100%;
+    box-shadow: 0 4px 9px rgba(192, 192, 192, 0.2);
+    height: 200px;
+}
